@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .loader {
+            border: 10px solid #ddd;
+            border-radius: 50%;
+            height: 100px;
+            width: 100px;
+            animation: loader 2s ease-in-out infinite;
+            border-top-color: rgb(69, 17, 239);
+            border-bottom-color: rgb(255, 91, 91);
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+        }
+
+        @keyframes loader {
+            100% {
+                transform: rotate(360deg);
+            }
+
+
+        }
+
+
+        .loader_2 {
+            display: flex;
+            gap: 20px;
+        }
+
+        .box {
+            margin-top: 100px;
+            height: 30px;
+            width: 30px;
+            border: 1px solid transparent;
+            border-radius: 50%;
+            background-color: black;
+        }
+
+        .box1 {
+            background-color: rgb(255, 89, 89);
+            animation: up_down 1s linear infinite;
+        }
+
+        .box2 {
+            background-color: rgb(89, 89, 251);
+            animation: up_down 1s linear .2s infinite;
+        }
+
+        .box3 {
+            background-color: rgb(75, 252, 113);
+            animation: up_down 1s linear .4s infinite;
+        }
+
+        .box4 {
+            background-color: rgb(246, 253, 53);
+            animation: up_down 1s linear .6s infinite;
+        }
+
+        @keyframes up_down {
+            0% {
+                transform: translateY(0px);
+            }
+
+            25% {
+                transform: translateY(-40px);
+            }
+
+            50% {
+                transform: translateY(-60px);
+            }
+
+            75% {
+                transform: translateY(-40px);
+            }
+
+            100% {
+                transform: translateY(-0px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="loader"></div>
+        <div class="loader_2">
+            <div class="box box1"></div>
+            <div class="box box2"></div>
+            <div class="box box3"></div>
+            <div class="box box4"></div>
+        </div>
+    </div>
+</body>
+
+</html>
