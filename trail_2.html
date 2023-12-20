@@ -113,7 +113,7 @@
     <div class="container-fluid border ">
         <h2 class="text-center h2">ADMISSION FORM</h2>
         <form action="#" id="regForm" class="form-control m-1 p-1 row g-3 ">
-            
+
             <div class="tab ">
                 <div class="d-flex p-1 flex-wrap gap-3 center">
                     <div class="photo flex-shrink-1  center  border d-flex align-items-center flex-column  justify-content-center gap-2 ">
@@ -235,10 +235,16 @@
                 
                 <hr>
             </div>
+
+
+
+
+
+           
             <div class="tab ">
                 <div class="row">
                     <div class="col-md-4">
-                        <label for="admissionType" class="form-label">Admission Type</label>
+                        <label for="admissionType"  class="form-label">Admission Type</label>
                         <select class="form-select" id="admissionType" required>
                             <option selected disabled value="">Choose...</option>
                             <option>KCET</option>
@@ -261,7 +267,7 @@
 
                     <div class="col-md-6">
                         <label for="rank" class="form-label">Rank</label>
-                        <input type="number" id="rank" min="2020" max="2024" class="form-control" required>
+                        <input type="number" id="rank" min="0" class="form-control" required>
 
                     </div>
                     <div class="col-md-6">
@@ -417,7 +423,7 @@
                             <input type="number" class="form-control" id="dipSemPercentage" required>
                         </div>
                         <div class="col-md-4">
-                            <label for="dcetRank" class="form-label"> DCET Rank
+                            <label for="dcetRank" class="form-label"> q Rank
                             </label>
                             <input type="number" class="form-control" id="dcetRank" required>
                         </div>
@@ -425,49 +431,211 @@
                 </div>
 
                 
-            </div>
-            <div class="tab text-center">
-                <h1> 3 boxx</h1>
-            </div>
-            <div class="tab text-center">
-                <h1> 4 boxx</h1>
-            </div>
-            <div class="tab text-center">
-                <h1> 5 boxx</h1>
-            </div>
-            <hr  >
-            <div  style="text-align:center;margin-top:40px;height:20px;">
-                <span class="step text-center"></span>
-                <span class="step text-center"></span>
-                <span class="step text-center"></span>
-                <span class="step text-center"></span>
-                <span class="step text-center"></span>
-            </div>
-            <div class="d-flex justify-content-around gap-3">
-                <button id="prevBtn" class="btn btn-outline-secondary" onclick="nextPrev(-1)">
-                    Previous
-                </button>
-                <button id="Submit" class="btn btn-outline-secondary">
-                    Submit
-                </button>
+            </div> 
 
-                <button id="nextBtn" class="btn btn-outline-secondary" onclick="nextPrev(1)">
-                    Next
-                </button>
+
+            <div class="tab ">
+                <h4 class="h5 text-decoration-underline p-1 text-danger text-center">FAMILY BACKGROUND</h4><br>
+                <div class="row mt-2">
+                    <div class="col-md-6">
+                        <label for="famFatherName" class="form-label">Father Name</label>
+                        <input type="text " class="form-control" id="famFatherName" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="famFatherOccupation" class="form-label">Occupation</label>
+                        <input type="text " class="form-control" id="famFatherOccupation" required>
+                    </div>
+
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-6">
+
+                        <label for="famMotherName" class="form-label">Mother Name</label>
+                        <input type="text " class="form-control" id="famMotherName" required>
+
+                    </div>
+                    <div class="col-md-6">
+                        <label for="famMotherOccupation" class="form-label">Occupation</label>
+                        <input type="text " class="form-control" id="famMotherOccupation" required>
+                    </div>
+
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-4">
+
+                        <label for="annualIncome" class="form-label">Annual income of Parent</label>
+                        <input type="number" class="form-control" id="annualIncome" required>
+
+                    </div>
+                </div>
+                <hr>
+                <h4 class="h5 text-center text-decoration-underline text-danger">STUDENT BANK DETAILS</h4>
+                <br>
+                <div class="row mt-2">
+                    <div class="col-md-6">
+                        <label for="stuName" class="form-label"> Name as per bank</label>
+                        <input type="text " class="form-control" id="stuName" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="accountNumber" class="form-label">Account Number</label>
+                        <input type="number" class="form-control" id="accountNumber" required>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-6">
+                        <label for="bankName" class="form-label">Bank Name</label>
+                        <input type="text " class="form-control" id="bankName" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="bankBranch" class="form-label">Bank Branch </label>
+                        <input type="text" class="form-control" id="bankBranch" required>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-6">
+                        <label for="ifscCode" class="form-label">IFSC Code</label>
+                        <input type="text " class="form-control" id="ifscCode" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="bankState" class="form-label">Select State</label>
+                        <select class="form-select" id="bankState">
+                            <option selected disabled value="">Choose...</option>
+                            <option>Karnataka</option>
+                            <option>Maharastra</option>
+                            <option>Kerala</option>
+                            <option>Tamilnadu</option>
+                            <option>Panjab</option>
+                        </select>
+                    </div>
+                </div>
+
 
             </div>
 
-        </form>
+
+            <div class="tab ">
+
+                <h4 class="h5 text-decoration-underline p-1 text-danger text-center">DECLARATION BY THE CANDIDATE /
+                    PARENT</h4><br>
+                <div class="text ">
+                    <ol>
+                        <li>
+                            I <input type="text" class="form-control w-25 m-1 d-inline" required placeholder="Name of Parent"
+                                req> the parent of the applicant
+
+                            shall be responsible for the payment of tees and dues if any outstanding. I shall be
+                            responsible the parent of the applicant for his/her conduct behavior during the period of
+                            studies in the Institute, I shall also agree to the condition that my ward will not leave
+                            the course in meddle nor will he/she apply for transfer. In such an eventually I shall make
+                            good financial obligation to the Institute.
+                        </li><br>
+                        <li>
+                            I hereby agree to abide by the rules and regulations of the Institute/university and I
+                            undertake that so long as I am a student of the Institute, I shall do nothing either inside
+                            or outside the Institute that will bring down the reputation of the Institute.
+
+                        </li><br>
+                        <li>
+                            I hereby agree to make good for any loss or damage to books, apparatus furniture and other
+                            article belonging to the Institute which may caused by my carelessness or negligence on my
+                            part.
+
+                        </li><br>
+                        <li>
+                            I hereby agree that, I shall pay full fees prescribed for the course at the time of
+                            admission and for each subsequent admission in II, III, IV year of BE Program periodically
+                            and also other fees such as examination fees etc., whenever the notification is made by the
+                            Institute authorities.
+
+                        </li><br>
+                        <li>
+                            If admitted, I shall produce the migration certificate from my university / Board where I
+                            have studied last. I shall produce the Transfer Certificate before the prescribed date.
+                            Obtaining eligibility certificate from Visvesvaraya Technology University, Belagavi, is
+                            solely my responsibility.
+
+                        </li><br>
+                        <li>
+                            I have carefully read the application and I accept to abide by the terms and conditions
+                            mentioned therein and make no claims against the Institute or society.
+
+                        </li><br>
+                        <li>
+                            I hereby undertake that I will meet the attendance requirements as prescribed by the
+                            University.
+
+                        </li><br>
+                        <li>
+                            Minimum percentage of attendance prescribed by the University is 85% or as may be prescribed
+                            by the university from time to time. The students who fall short of attendance will be
+                            detained.
+
+                        </li><br>
+                        <li>
+                            Indulging in ragging in the campus & hostel punishable according to Law.
+
+                        </li><br>
+                        <li>
+                            I personally visited the campus & I am satisfied with the infrastructure, and other
+                            facilities in the campus. So, I am willing to take admission in your institute.
+
+                        </li>
+                    </ol>
+                    <br>
+                </div>
+                <div class="d-flex justify-content-around">
+                    <span id="date">Date :</span>
+                    <span id="place">Place :</span>
+                </div>
+                <br>
+                <div class="col-12  d-flex align-items-center justify-content-center">
+                <div class="form-check  ">
+                    <input class=" border border-secondary rounded form-check-input" onclick="getDate()" type="checkbox" value=""
+                        id="checkBox" required>
+                    <label class="form-check-label" for="checkBox">
+                        Agree to terms and conditions
+                    </label>
+                </div>
+            </div>
+    </div>
+    <div class="tab text-center">
+        <h1> 5 boxx</h1>
+    </div>
+    <hr>
+    <div style="text-align:center;margin-top:40px;height:20px;">
+        <span class="step text-center"></span>
+        <span class="step text-center"></span>
+        <span class="step text-center"></span>
+        <span class="step text-center"></span>
+        <span class="step text-center"></span>
+    </div>
+    <div class="d-flex justify-content-around gap-3">
+        <button id="prevBtn" class="btn btn-outline-secondary" onclick="nextPrev(-1)">
+            Previous
+        </button>
+        <button id="Submit" class="btn btn-outline-secondary">
+            Submit
+        </button>
+
+        <button id="nextBtn" class="btn btn-outline-secondary" onclick="nextPrev(1)">
+            Next
+        </button>
+
+    </div>
+
+    </form>
 
 
     </div>
     <script>
         var currentTab = 0;
         showTab(currentTab);
+        var form = false;
 
         function showTab(n) {
             var x = document.getElementsByClassName("tab");
             x[n].style.display = "block";
+
             if (n == 0) {
                 document.getElementById("prevBtn").style.display = "none";
             } else {
@@ -484,8 +652,8 @@
             fixStepIndicator(n)
         }
         function nextPrev(n) {
-            setInterval(function () {var x = document.getElementsByClassName("tab");
-            if (!validateForm()) return false;
+            var x = document.getElementsByClassName("tab");
+            if (!validateForm() && n == 1) return false;
             // Hide the current tab:
             x[currentTab].style.display = "none";
             // Increase or decrease the current tab by 1:
@@ -497,11 +665,11 @@
                 return false;
             }
             // Otherwise, display the correct tab:
-            showTab(currentTab);}, 3000);
+            showTab(currentTab);
             // This function will figure out which tab to display
 
 
-            
+
         }
         function fixStepIndicator(n) {
             // This function removes the "active" class of all steps...
@@ -514,26 +682,18 @@
         }
 
         function validateForm() {
-            // This function deals with validation of the form fields
             var x, y, i, valid = true;
-            x = document.getElementsByClassName("tab");
-            y = x[currentTab].getElementsByTagName("input");
-            // A loop that checks every input field in the current tab:
-            for (i = 0; i < y.length; i++) {
-                // If a field is empty...
-                if (y[i].value == "") {
-                    // add an "invalid" class to the field:
-                    y[i].className += " invalid";
-                    // and set the current valid status to false
-                    valid = false;
+            // x = document.getElementsByClassName("tab");
+            // y = x[currentTab].getElementsByTagName("input");
+            // for (i = 0; i < y.length; i++) {
+            //     if (y[i].value == "") {
+            //         y[i].className += " invalid";
+            //         valid = false;
 
-                }
-            }
-            // If the valid status is true, mark the step as finished and valid:
-            // if (valid) {
-            // document.getElementsByClassName("step")[currentTab].className += " finish";
+            //     }
             // }
-            return valid; // return the valid status
+          
+            return valid;
         }
 
         function addDiploma() {
@@ -562,6 +722,16 @@
             (document.getElementById("biology").value) = 0;
             document.getElementById("totalMarks").value = 0;
             document.getElementById("percentage").value = 0;
+        }
+        function getDate() {
+
+            n = new Date();
+            y = n.getFullYear();
+            m = n.getMonth() + 1;
+            d = n.getDate();
+            document.getElementById("date").innerHTML = "Date :" + m + "/" + d + "/" + y;
+            document.getElementById("place").innerHTML = "Place : Belagavi";
+            document.getElementById("checkBox").value = "Set";
         }
     </script>
     <script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js">
